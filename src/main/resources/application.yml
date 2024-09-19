@@ -1,0 +1,47 @@
+#userAuth Service Properties yml
+spring:
+  profiles:
+#    active: dev
+    active: ${PROFILES_ACTIVE}
+  application:
+    name: userAuth-service
+  jackson:
+    default-property-inclusion: non_null
+springdoc:
+  packages-to-scan: com.love.timi.controller
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+  swagger-ui:
+    path: /contents/gpss/gw/user-auth/
+    disable-swagger-default-url: true
+    display-request-duration: true
+    operations-sorter: alpha
+  paths-to-match: /user-auth/api/**
+  api-docs:
+    path: /contents/gpss/gw/user-auth/v3/api-docs
+
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    encoding:
+      charset: UTF-8
+    session:
+      tracking-modes: cookie
+  error:
+    include-exception: false
+    include-stacktrace: never
+    whitelabel:
+      enabled: true
+  compression:
+    enabled: true
+  port: 8081
+
+love:
+  project:
+    date: 2024-06-17
+    version: 0.0.88
+    build: 88
+  chiper:
+    aes256: Aw#VOt!r7N8WpAm9MZCL?c2Ul6Tew5!P
+    ivspec: cF?5NN6R?c9xoaL#
