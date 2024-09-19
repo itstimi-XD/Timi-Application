@@ -20,9 +20,9 @@ spring:
           socketFactory:
             port: 465
             class: javax.net.ssl.SSLSocketFactory
-          connectiontimeout: 5000
+          connection timeout: 5000
           timeout: 5000
-          writetimeout: 5000
+          write timeout: 5000
   kafka:
     bootstrap-servers:
     producer:
