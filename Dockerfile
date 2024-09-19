@@ -34,3 +34,10 @@ ENTRYPOINT ["java",\
             "-XX:MinRAMPercentage=${JVM_MIN_RAM}",\
             "-XX:MaxRAMPercentage=${JVM_MAX_RAM}"\
            ]
+
+
+#FROM amazoncorretto:21.0.4
+#ARG JAR_FILE=build/libs/*.jar
+#COPY ${JAR_FILE} parkingcloudervice.jar
+#EXPOSE 8080
+#ENTRYPOINT ["java", "-Djava.net.preferIPv4Stack=true", "-Dspring.profiles.active=local", "-XX:+UseContainerSupport", "-Dserver.port=8080", "-Dfile.encoding=UTF-8", "-jar", "/parkingcloudervice.jar"]
