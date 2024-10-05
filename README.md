@@ -1,5 +1,5 @@
-## Service name : UserAuth Service
+## Service name : 
 
 swagger 확인가능 주소
 :
-http://localhost:8081/gw/user-auth/swagger-ui/index.html
+
